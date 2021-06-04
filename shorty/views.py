@@ -6,7 +6,7 @@ from shorty.models import Url
 
 class RedirectView(View):
     def get(self, request, short):
-        if short != None:
+        if short != '':
             try:
                 url = Url.objects.get(short_id=short)
                 url.counter += 1
